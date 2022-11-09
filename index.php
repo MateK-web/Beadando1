@@ -79,7 +79,18 @@
             <p class="szkozep">Alapítványunk 1993-ban alakult. Legfőbb feladatunk a menhely fenntartása és működtetése. Kb 300 - 320 kutya és 60 - 80 cica napi ellátásáról (etetés, állatorvos, oltások) gondoskodunk. 
                 A körzetben jelentős a szerepünk. Nyilvántartást vezetünk a talált és az elveszett állatokról.
                 Legfőbb nehézségeink a kutyák gazdához kihelyezése és az anyagiak megteremtése. Folyamatosan frissítjük az oldalunkat, mégis a személyes látogatást javasoljuk a felelősségteljes kiválasztáshoz. 
-                Nagyon szeretnénk, ha a kutyáink sorsa jóra fordulna és szerető családra találnának.<br>Ez az új oldalunk, jelenleg még csak béta fázisban jár. Esetleges opciók nem jelennek meg akkor látogason el a régi oldalunkra amelyet ezen a linken megtehet</p>
+                Nagyon szeretnénk, ha a kutyáink sorsa jóra fordulna és szerető családra találnának.<br>Ez az új oldalunk, jelenleg még csak béta fázisban jár. Esetleges opciók nem jelennek meg akkor látogason el a régi oldalunkra amelyet ezen a linken megtehet:<a href="http://zoldmenedek.hu/kutya_macska/Kezdolap.html">link</a> </p>
+                
+                  <iframe width="350" height="240" style="margin-left: 120px; margin-right: 100px; display: block;"
+                    src="https://www.youtube.com/watch?v=-e2Mdq7ucYg">>
+                  </iframe>
+
+                  <video width="350" height="240" controls style="margin-left: 120px; margin-right: 100px; display: block;">
+                      <source src="video/5sec.mp4" type="video/mp4">
+                      
+                      
+                  </video>
+                
         </div>
         <div class="col-lg-4 col-md-4 col-12">     
         <img class="kozep" src="képek/info.png" class="img-fluid pb-3"> 
