@@ -38,10 +38,7 @@
         <a class="nav-link" href="#">Elérhetőségink</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link"  href="#">Belépés</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"  href="#">Regisztráció</a>
+        <a class="nav-link"  href="belépés.php">Belépés/Kilépés</a>
       </li>
     </ul>
   </div>
@@ -96,12 +93,8 @@
             </div>
                 <div class="p-1 mb-1 bg-dark text-white">
                   <iframe width="350" height="240" style="margin-left: auto; margin-right: auto; display: block;"
-                    src="https://www.youtube.com/watch?v=-e2Mdq7ucYg">>
+                    src="https://youtube.com/embed/-e2Mdq7ucYg">
                   </iframe>
-
-                  <video width="350" height="240" controls style="margin-left: auto; margin-right: auto; display: block;">
-                      <source src="video/5sec.mp4" type="video/mp4"> 
-                  </video>
                 </div>
         </div>
         <div class="col-lg-4 col-md-4 col-12">     
@@ -116,6 +109,11 @@
             <div class="p-1 mb-1 bg-dark text-white"><p class="szkozep">Hálásan köszönjük, ha állatorvosok jelentkeznek orvosi munkák elvégzésére. Szeretnénk az ivartalanító műtétek számát optimális szintre. <br>
                 Szívesen fogadunk száraz kenyeret, jó minőségű állateledelt, faforgácsot, tisztítószert, tisztítóeszközöket, gumikesztyűt, építőanyagot a menhely támogatására. </p>
             </div>
+            <div class="p-1 mb-1 bg-dark text-white">
+            <video width="350" height="240" controls style="margin-left: auto; margin-right: auto; display: block;">
+                      <source src="video/5sec.mp4" type="video/mp4"> 
+                  </video>
+</div>
         </div>  
     </section>
  </a>
@@ -124,6 +122,8 @@
 
  <!--Gazdiraváró kutyák-->
  <a id="kutyák">
+
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
