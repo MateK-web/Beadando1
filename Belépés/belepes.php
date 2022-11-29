@@ -1,12 +1,12 @@
 <?php
     if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
         try {
-        
+            // Kapcsolódás
             $dbh = new PDO('mysql:host=localhost;dbname=lekeres', 'root', '',
                             array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
             $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
             
-            
+            // Felhsználó keresése
             $sqlSelect = "select id, csaladi_nev, uto_nev from felhasznalok where bejelentkezes = :bejelentkezes and jelszo = sha1(:jelszo)";
             $sth = $dbh->prepare($sqlSelect);
             $sth->execute(array(':bejelentkezes' => $_POST['felhasznalo'], ':jelszo' => $_POST['jelszo']));
@@ -31,7 +31,7 @@
                 Név: <strong><?= $row['csaladi_nev']." ".$row['uto_nev'] ?></strong>
             <?php } else { ?>
                 <h1>A bejelentkezés nem sikerült!</h1>
-                <a href="belrag.tpl.php" >Próbálja újra!</a>
+                <a href="belepes.php" >Próbálja újra!</a>
             <?php } ?>
         <?php } ?>
     </body>
