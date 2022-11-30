@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,7 +6,7 @@
     <meta charset="utf-8">
   </head>
   <body>
-
+  <from action="?oldal=belepes" method ="post">
 
     <div class="container" style=" margin-top:15px;margin-bottom:15px; ">
 <div class="row kerek" >

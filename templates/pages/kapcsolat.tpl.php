@@ -11,6 +11,7 @@
 
 </head>
 <body>
+  <from onsubmit='return ellenoriz();' method='post' action='?oldal=elkuld'>
 <!--Oldalra mozgó képek(Slide)-->
 
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -56,7 +57,7 @@
             <label> <textarea id="szoveg" name="szoveg" cols="40" rows="10"></textarea> Üzenet (kötelező): </label>
             <br/>
             <input id="kuld" type="submit" value="Küld">
-            <button onclick="ellenoriz();" type="button">Ellenőriz</button>
+            <button onclick='ellenoriz();' type="button">Ellenőriz</button>
         </div>
     </form>
 

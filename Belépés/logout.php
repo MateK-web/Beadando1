@@ -1,9 +1,6 @@
-<?php 
-
-session_start();
-
-session_unset();
-
-session_destroy();
-
-header("Location: kilepes.tpl.php");
+<?php
+$data = $_SESSION;
+unset($_SESSION["csn"]);
+unset($_SESSION["un"]);
+unset($_SESSION["login"]);
+?>

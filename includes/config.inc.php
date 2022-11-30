@@ -1,17 +1,24 @@
 <?php
 
+$ablakcim = array (
+    'cim' => 'Zöldmenedék',
+);
+
 $lablec = array(
     'copyright' => 'Copyright '.date("Y").'.',
     'ceg' => 'Zöldmenedék'
 );
 
 $oldalak = array(
-    '/' => array('fajl' => 'cimlap', 'szoveg' => 'Kezdőlap'),
-    'gazdira' => array('fajl' => 'gazdira', 'szoveg' => ' Gazdiraváró állatok'),
-    'galeria' => array('fajl' => 'galeria', 'szoveg' => ' Galéria'),
-    'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => ' Kapcsolat'),
-    'belepes' => array('fajl' => 'belreg', 'szoveg' => ' Belépés'),
-    'kilepes' => array('fajl' => 'kilepes', 'szoveg' => ' Kilépés'),
+    '/' => array('fajl' => 'cimlap', 'szoveg' =>'Címlap','menun' => 'Kezdőlap'),
+    'gazdira' => array('fajl' => 'gazdira', 'szoveg'=>'Gazdira váró','menun' => ' Gazdiraváró állatok'),
+    'galeria' => array('fajl' => 'galeria', 'szoveg' =>'Galléria','menun'=> ' Galéria'),
+    'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg'=>'Kapcsolat','menun' => ' Kapcsolat'),
+    'belepes' => array('fajl' => 'belepes', 'szoveg'=>'Belépés','menun' => ' Belépés'),
+    'kilepes' => array('fajl' => 'kilepes', 'szoveg' =>'Kilépés','menun'=> ' Kilépés'),
+    'belep' => array('fajl' => 'belep', 'szoveg' => '', 'menun' => 'Belep'),
+    'regisztral' => array('fajl' => 'regisztral', 'szoveg' =>'','menun'=> ' Kilépés'),
+
 );
 
 $hiba_oldal = array ('fajl' => '404', 'szoveg' => 'A keresett oldal nem található!');

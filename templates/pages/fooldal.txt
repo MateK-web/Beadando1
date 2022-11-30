@@ -1,5 +1,3 @@
-<div id="cimlap">
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
