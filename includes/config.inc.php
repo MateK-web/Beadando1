@@ -10,15 +10,15 @@ $lablec = array(
 );
 
 $oldalak = array(
-    '/' => array('fajl' => 'cimlap', 'szoveg' =>'Cimlap','menun' => 'Kezdőlap'),
+    '/' => array('fajl' => 'cimlap', 'szoveg' =>'Címlap','menun' => 'Kezdőlap'),
     'gazdira' => array('fajl' => 'gazdira', 'szoveg'=>'Gazdira váró','menun' => ' Gazdiraváró állatok'),
     'galeria' => array('fajl' => 'galeria', 'szoveg' =>'Galléria','menun'=> ' Galéria'),
     'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg'=>'Kapcsolat','menun' => ' Kapcsolat'),
     'uzenet' => array('fajl' => 'uzenet', 'szoveg' =>'Üzenet','menun'=> ' Üzenet'),
     'belepes' => array('fajl' => 'belepes', 'szoveg'=>'Belépés','menun' => ' Belépés'),
     'kilepes' => array('fajl' => 'kilepes', 'szoveg' =>'Kilépés','menun'=> ' Kilépés'),
-    'belep' => array('fajl' => 'belep', 'szoveg' => '', 'menun' => 'Belep'),
-    'regisztral' => array('fajl' => 'regisztral', 'szoveg' =>'','menun'=> ' Kilépés'),
+    'belep' => array('fajl' => 'belep', 'szoveg' => '', 'menun' => array(0,0)),
+    'regisztral' => array('fajl' => 'regisztral', 'szoveg' =>'','menun'=> array(0,0)),
 
 );
 
