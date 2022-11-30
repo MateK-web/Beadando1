@@ -2,7 +2,7 @@
 if(isset($_POST['felhasznalo']) && isset($_POST['jelszo']) && isset($_POST['vezeteknev']) && isset($_POST['utonev'])) {
     try {
 
-        $dbh = new PDO('mysql:host=localhost;dbname=lekeres','lekeres', 'lekeres',
+        $dbh = new PDO('mysql:host=localhost;dbname=lekeres', 'root', '',
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
@@ -25,6 +25,8 @@ if(isset($_POST['felhasznalo']) && isset($_POST['jelszo']) && isset($_POST['veze
                 $newid = $dbh->lastInsertId();
                 $uzenet = "A regisztrációja sikeres.<br>Azonosítója: {$newid}";
                 $ujra = false;
+                header("Location:/BEANADNÓ/index.php?oldal=belepes");
+                
             }
             else {
                 $uzenet = "A regisztráció nem sikerült.";

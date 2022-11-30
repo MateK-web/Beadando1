@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php if(file_exists('./logicals/'.$keres['fajl'].'.php')) { include("./logicals/{$keres['fajl']}.php"); } ?>
+<?php if(file_exists('./Belépés/'.$keres['fajl'].'.php')) { include("./Belépés/{$keres['fajl']}.php"); } ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +29,7 @@
                 </div>
         <div id="be"><?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?></div>
     </header>
-
+    <div id="be"><?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?></div>
 
     <div id="content">
         <?php include("./templates/pages/{$keres['fajl']}.tpl.php"); ?>

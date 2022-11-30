@@ -1,4 +1,4 @@
-
+<from action="?oldal=belepes" method ="post">
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,13 +7,13 @@
   </head>
   <body>
   <from action="?oldal=belepes" method ="post">
-
+  <div id="be"><?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?></div>
     <div class="container" style=" margin-top:15px;margin-bottom:15px; ">
 <div class="row kerek" >
 
     <div class="col-lg-6 col-md-6 col-12">
 
-    <form action = "./Belépés/belepes.php" method = "post">
+    <form action = "./Belépés/belep.php" method = "post">
       <fieldset>
         <legend>Bejlentkezés</legend>
         <br>
@@ -30,7 +30,7 @@
     
     <div class="col-lg-6 col-12" style="margin:auto;">
     <h3>Regisztrálja magát, ha még nem felhasználó!</h2>
-    <form action = "./Belépés/regisztracio.php" method = "post">
+    <form action = "./Belépés/regisztral.php" method = "post">
       <fieldset>
         <legend>Regisztráció</legend>
         <br>

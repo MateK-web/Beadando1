@@ -2,7 +2,7 @@
 if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
     try {
 
-        $dbh = new PDO('mysql:host=localhost;dbname=lekeres','lekeres', 'lekeres',
+        $dbh = new PDO('mysql:host=localhost;dbname=lekeres', 'root', '',
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
 
@@ -13,6 +13,7 @@ if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
         $row = $sth->fetch(PDO::FETCH_ASSOC);
         if($row) {
             $_SESSION['csn'] = $row['csaladi_nev']; $_SESSION['un'] = $row['uto_nev']; $_SESSION['login'] = $_POST['felhasznalo'];
+            header("Location:/BEANADNÓ/index.php?oldalak=cimlap");
         }
     }
     catch (PDOException $e) {
@@ -20,6 +21,6 @@ if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
     }
 }
 else {
-     header("Location:/BEANADNÓ/index.php?oldal=belepes");
+    header("Location:/BEANADNÓ/index.php?oldalak=cimlap");
 }
 ?>

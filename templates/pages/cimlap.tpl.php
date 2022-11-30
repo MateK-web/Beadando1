@@ -12,7 +12,7 @@
 
 </head>
 <body>
-  
+<div id="be"><?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?></div>
 <!--Oldalra mozgó képek(Slide)-->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
