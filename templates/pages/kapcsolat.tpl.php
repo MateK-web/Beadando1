@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <title>Zöldmenedék</title>
     <meta charset="UTF-8">
@@ -11,7 +11,6 @@
 
 </head>
 <body>
-  <from onsubmit='return ellenoriz();' method='post' action='?oldal=elkuld'>
 <!--Oldalra mozgó képek(Slide)-->
 
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -47,20 +46,24 @@
 
     <div class="col-lg-6 col-md-6 col-12">
 
-    <h1>Kapcsolat</h1>
-    <form name="kapcsolat" action="./templates/pages/szervell.php" onsubmit="return ellenoriz();" method="post">
-        <div>
-            <label><input type="text" id="nev" name="nev" size="20" maxlength="40">Név (minimum 5 karakter): </label>
-            <br/>
-            <label><input type="text" id="email" name="email" size="30" maxlength="40">E-mail (kötelező): </label>
-            <br/>
-            <label> <textarea id="szoveg" name="szoveg" cols="40" rows="10"></textarea> Üzenet (kötelező): </label>
-            <br/>
-            <input id="kuld" type="submit" value="Küld">
-            <button onclick='ellenoriz();' type="button">Ellenőriz</button>
+    <form  onsubmit='return ellenoriz();' method='post' action='?oldal=elkuld'>
+    
+        <div >
+            <label>Email:</label> <input id='email' name='email' type='text' placeholder='E-mail'>
         </div>
-    </form>
+        <div >
+                    <label>Tárgy:</label> <input id="subject" name='subject' type='text' placeholder='Tárgy'>
+        </div>
 
+        <div >
+        <label> Üzenet:</label><br> <textarea id='message' name='message' rows='15' cols='40' ></textarea>
+        </div><br>
+
+        <div>
+                <input action='?oldal=elkuld' id='kuld' type='submit' value='Küld'>
+                <button  onclick='ellenoriz();' type='button'>Ellenőriz</button>
+        </div>
+      </form>
     </div>
 
     

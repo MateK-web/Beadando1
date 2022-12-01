@@ -1,42 +1,4 @@
-<?php
-    include('./includes/config.inc.php');
-
-    $uzenet = array();   
-
-    if (isset($_POST['kuld'])) {
-        foreach($_FILES as $fajl) {
-            if ($fajl['error'] == 4);   
-            elseif (!in_array($fajl['type'], $MEDIATIPUSOK))
-                $uzenet[] = " Nem megfelelő típus: " . $fajl['name'];
-            elseif ($fajl['error'] == 1   
-                        or $fajl['error'] == 2   
-                        or $fajl['size'] > $MAXMERET) 
-                $uzenet[] = " Túl nagy állomány: " . $fajl['name'];
-            else {
-                $vegsohely = $MAPPA1.strtolower($fajl['name']);
-                if (file_exists($vegsohely))
-                    $uzenet[] = " Már létezik: " . $fajl['name'];
-                else {
-                    move_uploaded_file($fajl['tmp_name'], $vegsohely);
-                    $uzenet[] = ' Ok: ' . $fajl['name'];
-                }
-            }
-        }        
-    }
-
-
-    
-    $kepek = array();
-    $olvaso = opendir($MAPPA1);
-    while (($fajl = readdir($olvaso)) !== false)
-        if (is_file($MAPPA1.$fajl)) {
-            $vege = strtolower(substr($fajl, strlen($fajl)-4));
-            if (in_array($vege, $TIPUSOK))
-                $kepek[$fajl] = filemtime($MAPPA1.$fajl);            
-        }
-    closedir($olvaso);
-    
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -77,11 +39,14 @@
         echo '</ul>';
     }
 ?>
-    <form action="feltolt.php" method="post"
-                enctype="multipart/form-data">
-        <label>Első:
-            <input type="file" name="elso" required>       
-        <input type="submit" name="kuld">
+    <form action="?oldal=galeria" method="post" enctype="multipart/form-data">
+    <input  type="hidden" name="max_file_size" value="110000">
+       
+            
+       <label for="file-upload" class="custom-file-upload">Fájlok kiválasztása
+       <input  id="file-upload" type="file" name="fajlok[]" accept="image/png, image/jpeg" multiple required>
+   </label>
+   <input class="btn2" type="submit" name="kuld">
       </form>    
 
 </body>

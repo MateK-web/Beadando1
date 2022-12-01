@@ -1,7 +1,7 @@
 <div id="cimlap">
   
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <title>Zöldmenedék</title>
     <meta charset="UTF-8">
@@ -12,7 +12,6 @@
 
 </head>
 <body>
-<div id="be"><?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?></div>
 <!--Oldalra mozgó képek(Slide)-->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
@@ -22,13 +21,13 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="képek/borito1.jpg" alt="First slide">
+      <img class="d-block w-100" src="Képek/borito1.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="Képek/borito3.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="képek/borito2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="Képek/borito2.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -41,6 +40,7 @@
   </a>
     </div>
     <!--Oldalra mozgó képek(Slide)vége--> 
+  
       <!--Kezdo selction(Rólunk,Támogatás,Segítség,Yt videó, mp4 videó-->
     <section class="my-4">
         <div class="py-4">
@@ -49,7 +49,7 @@
          <div class="container-fluid">
         <div class="row">
          <div class="col-lg-4 col-md-4 col-12">     
-               <img class="kozep" src="képek/info.png" class="img-fluid pb-3"> 
+               <img class="kozep" src="Képek/info.png" class="img-fluid pb-3"> 
                <h3 class="text-center">Rólunk</h3>
                <div class="p-1 mb-1 bg-dark text-white szurkekerek"><p class="szkozep">Alapítványunk 1993-ban alakult. Legfőbb feladatunk a menhely fenntartása és működtetése. Kb 300 - 320 kutya és 60 - 80 cica napi ellátásáról (etetés, állatorvos, oltások) gondoskodunk. 
                  A körzetben jelentős a szerepünk. Nyilvántartást vezetünk a talált és az elveszett állatokról.
@@ -76,13 +76,13 @@
 
 
         <div class="col-lg-4 col-md-4 col-12">     
-        <img class="kozep" src="képek/info.png" class="img-fluid pb-3"> 
+        <img class="kozep" src="Képek/info.png" class="img-fluid pb-3"> 
             <h3 class="text-center">Támogatás</h3>
-            <p style="text-align:center; padding-top: 20px;"><img src="képek/1sz.jpg" class="img-fluid pb-3" ></p>
+            <p style="text-align:center; padding-top: 20px;"><img src="Képek/1sz.jpg" class="img-fluid pb-3" ></p>
             <p class="text-center"></p>
         </div>  
         <div class="col-lg-4 col-md-4 col-12">     
-        <img class="kozep" src="képek/info.png" class="img-fluid pb-3"> 
+        <img class="kozep" src="Képek/info.png" class="img-fluid pb-3"> 
             <h3 class="text-center">Segítsen</h3>
             <div class="p-1 mb-1 bg-dark text-white szurkekerek"><p class="szkozep">Hálásan köszönjük, ha állatorvosok jelentkeznek orvosi munkák elvégzésére. Szeretnénk az ivartalanító műtétek számát optimális szintre. <br>
                 Szívesen fogadunk száraz kenyeret, jó minőségű állateledelt, faforgácsot, tisztítószert, tisztítóeszközöket, gumikesztyűt, építőanyagot a menhely támogatására. </p>

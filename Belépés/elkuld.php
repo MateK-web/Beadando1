@@ -4,24 +4,24 @@ $email_ok= true;
 $message_ok= true;
 
 
-if(!isset($_POST['subject'])  strlen($_POST['subject']) < 5)
-    {
+if(!isset($_POST['subject']) || strlen($_POST['subject']) < 5)
+	{
         $uzenet="A tárgy hibás próbálja újra!";
-        $subjectok= false;
-    }
+        $subject_ok= false;
+	}
 
-    $re = '/^([A-Za-z0-9-.])+@([A-Za-z0-9_-.])+.([A-Za-z]{2,4})$/';
-    if(!isset($_POST['email'])  !preg_match($re,$_POST['email']))
-    {
+	$re = '/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/';
+	if(!isset($_POST['email']) || !preg_match($re,$_POST['email']))
+	{
         $uzenet="Az e-mail hibás próbálja újra!";
         $email_ok = false;
-    }
+	}
 
-    if(!isset($_POST['message']) || empty($_POST['message']))
-    {
+	if(!isset($_POST['message']) || empty($_POST['message']))
+	{
         $uzenet="Az üzenet mező hibás próbálja újra!";
         $message_ok = false;
-    }
+	}
 
 if (isset($_POST['email'])&&isset($_POST['subject'])&&isset($_POST['message'])) {
         $email = $_POST['email'] ;
@@ -38,11 +38,11 @@ if (isset($_SESSION['login'])) {
 if ($email_ok==true&&$message_ok==true&&$subject_ok==true) {
 
                 try {
-
-        $dbh = new PDO('mysql:host=localhost;dbname=beadando1234', 'beadando1234', 'beadando1234',
+        
+                $dbh = new PDO('mysql:host=localhost;dbname=lekeres', 'root', '',
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
-        $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
-
+        $dbh->query('SET NAMES utf8 COLLATE utf8_general_ci');
+        
             $sqlInsert = "insert into uzenet(email, subject, message, user)
                           values(:email, :subject, :message, :user)";
             $stmt = $dbh->prepare($sqlInsert); 
@@ -50,12 +50,12 @@ if ($email_ok==true&&$message_ok==true&&$subject_ok==true) {
                                  ':message' => $_POST['message'],':user' => $user)); 
             if($count = $stmt->rowCount()) {
                 $newid = $dbh->lastInsertId();
-
-                $uzenet = "Az üzenet elküldése sikerült.";
+                
+                $uzenet = "Az üzenet elküldése sikerült.";                 
                 $ujra = false;
 
                 }
-
+            
             else{
                 $uzenet="Az üzenetet nem sikerült elküldeni";
                 $ujra = true;
@@ -64,12 +64,12 @@ if ($email_ok==true&&$message_ok==true&&$subject_ok==true) {
     catch (PDOException $e) {
         $uzenet = "Hiba: ".$e->getMessage();
         $ujra = true;
-    }
+    }  
 }else {
     $uzenet="Az üzenetet nem sikerült elküldeni";
                 $ujra = true;
 }
-
+    
 
 }else{
            header("Location:/index.php?oldal=kapcsolat");
