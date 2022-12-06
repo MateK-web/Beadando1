@@ -11,6 +11,7 @@
 
 </head>
 <body>
+  <from onsubmit='return ellenoriz();' method='post' action='?oldal=elkuld'>
 <!--Oldalra mozgó képek(Slide)-->
 
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -21,13 +22,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="képek/borito1.jpg" alt="First slide">
+      <img class="d-block w-100" src="Képek/borito1.jpg" alt="First slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="Képek/borito3.jpg" alt="Second slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="képek/borito2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="Képek/borito2.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -46,24 +47,25 @@
 
     <div class="col-lg-6 col-md-6 col-12">
 
-    <form  onsubmit='return ellenoriz();' method='post' action='?oldal=elkuld'>
+    <h1>Kapcsolat</h1>
     
-        <div >
-            <label>Email:</label> <input id='email' name='email' type='text' placeholder='E-mail'>
-        </div>
-        <div >
-                    <label>Tárgy:</label> <input id="subject" name='subject' type='text' placeholder='Tárgy'>
-        </div>
+        <form class='login-box' onsubmit='return ellenoriz();' method='post' action='?oldal=elkuld'>
+       <div class='textbox2'>
+        <label>Email:</label> <input id='email' name='email' type='text' placeholder='E-mail'>
+       </div>
+          <div class='textbox2'>
+            Tárgy: <input id="subject" name='subject' type='text' placeholder='Tárgy'>
+          </div>
+        <div class='textbox'>
+          Üzenet:<br> <textarea id='message' name='message' rows='15' cols='40' ></textarea>
+          </div><br>
+          <div>
+            <input class='btn2' id='kuld' type='submit' value='Küld'>
+            <button class='btn2' onclick='ellenoriz();' type='button'>Ellenőriz</button>
+            </div>
+              </form>
 
-        <div >
-        <label> Üzenet:</label><br> <textarea id='message' name='message' rows='15' cols='40' ></textarea>
-        </div><br>
 
-        <div>
-                <input action='?oldal=elkuld' id='kuld' type='submit' value='Küld'>
-                <button  onclick='ellenoriz();' type='button'>Ellenőriz</button>
-        </div>
-      </form>
     </div>
 
     

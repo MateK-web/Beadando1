@@ -11,13 +11,6 @@ CREATE TABLE `felhasznalok` (
   `jelszo` varchar(40) NOT NULL default '',
   PRIMARY KEY  (`id`)
 )
-CREATE TABLE `uzenet` (
-  `subject` int(10) unsigned NOT NULL auto_increment,
-  `email` varchar(45) NOT NULL default '',
-  `message` varchar(45) NOT NULL default '',
-  `user` varchar(12) NOT NULL default '',
-  PRIMARY KEY  (`subject`)
-)
 ENGINE = MYISAM
 CHARACTER SET utf8 COLLATE utf8_general_ci;
 
@@ -34,6 +27,3 @@ INSERT INTO `felhasznalok` (`id`,`csaladi_nev`,`uto_nev`,`bejelentkezes`,`jelszo
  (10,'Családi_10','Utónév_10','Login10',sha1('login10')),
  (11,'Családi_11','Utónév_11','Login11',sha1('login11')),
  (12,'Családi_12','Utónév_12','Login12',sha1('login12'));
-
-INSERT INTO `uzenet` (`subject`,`email`,`message`,`user`) VALUES 
- (1,'Kuti_Janos','teszt@gmail.com','Vendég',),

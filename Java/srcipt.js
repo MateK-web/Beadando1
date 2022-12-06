@@ -8,14 +8,14 @@ function ellenoriz() {
 	var rendben = true;
 	var fokusz = null;
 
-	var szoveg = document.getElementById("szoveg");
-	if (szoveg) {
-		if (szoveg.value.length==0) {
+	var subject = document.getElementById("subject");
+	if (subject) {
+		if (subject.value.length==0) {
 			rendben = false;
-			szoveg.style.background = '#f99';
-			fokusz = szoveg;
+			subject.style.background = '#f99';
+			fokusz = subject;
 		} else {
-			szoveg.style.background = '#9f9';
+			subject.style.background = '#9f9';
 		}
 	}
 

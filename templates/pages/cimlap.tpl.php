@@ -12,6 +12,7 @@
 
 </head>
 <body>
+
 <!--Oldalra mozgó képek(Slide)-->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ul class="carousel-indicators">
